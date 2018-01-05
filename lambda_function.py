@@ -25,8 +25,8 @@ def lambda_handler(event, context):
         return 
         
     # 応答メッセージ組み立て
-    repMessage = "uesrId=" +  event["lineMessage"]["events"][0]["source"]["userId"] 
-    #repMessage += "replyToken=" +  event["lineMessage"]["events"][0]["replyToken"]
+    repMessage = "uesrId:" +  event["lineMessage"]["events"][0]["source"]["userId"] + "\n"
+    repMessage += "replyToken:" +  event["lineMessage"]["events"][0]["replyToken"]
     
     logger.info(repMessage)
 
